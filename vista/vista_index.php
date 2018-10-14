@@ -13,7 +13,28 @@
 <body>
 
 
-<div id="buscar"></div>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form action="dato.php" method="post">
+                  <div class="form-group row">
+                    <label for="exampleFormControlSelect1 col-sm-2" >Example select</label>
+                    <select class="form-control  " id="exampleFormControlSelect1" name="dato">
+                      <option selected>buscar</option>
+                      <?php foreach ($dato as $value): ?>
+                      <option value="<?php echo $value['nom_libro']; ?>" ><?php echo $value['nom_libro']; ?></option>
+                        <?php endforeach ?>
+                    </select>
+                    <button class="btn btn-primary" type="submit">enviar</button>
+                  </div>
+
+            </form>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+
 
 
 
@@ -21,7 +42,7 @@
 <script>
 	$(document).ready(function(){
 
-		$('#buscar').load('buscador/buscador.php');
+		$('#exampleFormControlSelect1').select2();
 	});
 
 </script>

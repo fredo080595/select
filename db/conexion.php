@@ -7,7 +7,7 @@ class conectar{
 	private $server = "localhost";
 	private $user = "root";
 	private $pass = "";
-	private $db = "ventas";
+	private $db = "biblioteca";
 
 	public function conexion(){
 
